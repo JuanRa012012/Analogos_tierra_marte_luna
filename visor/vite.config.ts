@@ -109,8 +109,9 @@ function terrainGzipHeaders(): Plugin {
 }
 
 export default defineConfig({
+  base: './',
   define: {
-    CESIUM_BASE_URL: JSON.stringify(`/${cesiumBaseUrl}`),
+    CESIUM_BASE_URL: JSON.stringify(`./${cesiumBaseUrl}`),
   },
   server: {
     port: 5173, // 5174 es del puente del motor (herramientas/motor-puente/servidor.mjs), que solo acepta el origen localhost:5173
